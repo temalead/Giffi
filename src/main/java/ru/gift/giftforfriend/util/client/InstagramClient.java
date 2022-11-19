@@ -1,4 +1,4 @@
-package ru.gift.giftforfriend.util;
+package ru.gift.giftforfriend.util.client;
 
 import com.github.instagram4j.instagram4j.IGClient;
 import lombok.SneakyThrows;

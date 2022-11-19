@@ -1,4 +1,4 @@
-package ru.gift.giftforfriend.service;
+package ru.gift.giftforfriend.service.social_network;
 
 import java.util.List;
 
@@ -8,7 +8,7 @@ import java.util.List;
  *
  * @author Tema Nikulin
  */
-public interface InstagramService {
+public interface SocialClientService {
 
     /**
      * Отправляет список всех хэштегов всех фото пользователя
@@ -25,8 +25,20 @@ public interface InstagramService {
     List<String> getTextsOfAllPosts(List<String> text);
 
     /**
-     * @param username - имя пользователя, которому выбирается подарок
      * @return необходимые подарки
      */
-    List<String> getNeededGifts(String username);
+    List<String> getNamesOfNeededGifts();
+
+    /**
+     * Определяет тип социальной сети, которую ввёл пользователь
+     * @return тип соц.сети
+     */
+    SocialNetwork getType();
+
+    /**
+     *
+     * @param link ссылка на страницу пользователя
+     * @return имя пользователя
+     */
+    String getUsername(String link);
 }
